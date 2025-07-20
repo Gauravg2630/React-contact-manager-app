@@ -1,0 +1,120 @@
+/* Layout wrapper */
+.contact-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Left Section (image + branding) */
+.contact-left {
+  flex: 1;
+  background-color: #f2faf6;
+  background-image: url('../assets/image.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 40px;
+  background-size: cover;
+}
+
+.contact-left h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 2px;
+  text-align: center;
+  
+}
+
+.contact-left img {
+  max-width: 80%;
+  height: auto;
+  margin-top: 40px;
+}
+
+/* Right Section (form) */
+.contact-right {
+  flex: 1;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-left: 140px;
+  margin-top: 100px;
+}
+
+/* Form Styles */
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+form h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+  width: 91%;
+}
+
+input:focus {
+  border-color: #4caf50;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contact-page {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: unset;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-left img {
+    max-width: 60%;
+  }
+}
